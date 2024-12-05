@@ -2,25 +2,116 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
+    line-height: 1.6;
 }
-nav {
-    background: #007BFF;
-    padding: 10px;
+
+header {
     text-align: center;
-}
-nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
-main {
     padding: 20px;
-    text-align: center;
+    background-color: #007BFF;
+    color: white;
 }
-form input, form select, form button {
-    margin: 5px;
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav a.active {
+    text-decoration: underline;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.navbar .active a {
+    border-bottom: 3px solid blue;
+    color: blue;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.converter {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.converter h2 {
+    margin-bottom: 20px;
+}
+
+.converter label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.converter input,
+.converter select,
+.converter button {
+    width: 100%;
     padding: 10px;
+    margin: 5px 0 15px;
     font-size: 1em;
+}
+
+.converter button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.converter button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.result p {
+    margin: 5px 0;
 }
