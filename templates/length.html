@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Length Converter</h1>
+<form method="POST">
+    <input type="number" name="value" placeholder="Enter value" required>
+    <select name="from_unit">
+        {% for unit in units %}
+        <option value="{{ unit }}">{{ unit }}</option>
+        {% endfor %}
+    </select>
+    <select name="to_unit">
+        {% for unit in units %}
+        <option value="{{ unit }}">{{ unit }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Convert</button>
+</form>
+{% if result is not none %}
+<p>Converted Value: {{ result }}</p>
+{% endif %}
+{% endblock %}
